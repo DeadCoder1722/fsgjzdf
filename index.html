@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Budget Pig</title>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.9/vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.9/vendors/jquery.slimscroll.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <script src="Javascript/login.js"></script>
+
+ 
+</head>
+
+<body>
+
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo white-text">Budget Pig</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#modal1" class="modal-trigger">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+      <!-- Modal Trigger -->
+  <!--<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>-->
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+      <!--login-->
+    <div class="login-content">
+        <div class="modal-content">
+          <h4>Log in </h4>
+            <!--begin form div-->
+            <div class="row">
+                <form class="col s12" action="dashboard.php" method="POST">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="username" name="username" type="text" class="validate">
+                            <label for="username">Username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" name="password" type="password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+        
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="fa fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+            <!--end form div-->
+        </div>
+    </div>
+    <!--register-->
+    <div class="register-content">
+        <div style="overflow:hidden" class="modal-content register-content">
+          <h4>Register </h4>
+          <!--begin form div-->
+            <div class="row">
+                <form class="col s12" action="sent.php" method="POST">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="Firstname" id="first_name" name = "firstname" type="text" class="validate">
+                            <!--<label for="first_name">First Name</label>-->
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" name = "lastname" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="email" type="email" name = "email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    
+                 
+                        <div class="input-field col s6">
+                            <input id="username" type="text" name = "username" class="validate">
+                            <label for="username">Username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" name = "password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="passwordConfirmation" type="password" class="validate"><span id='message'></span>
+                            <label for="passwordConfirmation">Password Confirmation</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="fa fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+            <!--end form div-->
+        </div>
+    </div>
+    
+    <div class="modal-footer">
+      <a href="#" class="modal-action waves-effect waves-green btn-flat login-link">Login</a>
+      <a href="#" class="modal-action waves-effect waves-green btn-flat register-link">Register</a>
+    </div>
+  </div>
+  
+    <div id="fullpage">
+
+        <div class="section" id="first" data-anchor = "home">
+
+            <div id="first-section-text">
+                <div class="title">
+                    Budget Pig
+                </div>
+                Budget Pig is here to help you save money
+            </div>
+            <a class="money-icon btn-large modal-trigger" href="#modal1"><i class="fa fa-usd right"></i></i>I'm ready to save</a>
+        </div>
+        <div class="section" id="second" data-anchor = "about">
+            <div class="about-text row center-align">
+                <h1>About</h1>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l6">
+                    <h1 class="center-align">Simple to use</h1>
+                    <div class="simple-list">
+                        <p class="flow-text"><i class="fa fa-users"></i> Manage your budget with intelligence</p>
+                        <p class="flow-text"><i class="fa fa-bar-chart"></i> Analyze your spending habits</p>
+                        <p class="flow-text"><i class="fa fa-check-square-o"></i> Easy to use interface</p>
+                        <p class="flow-text"><i class="fa fa-smile-o"></i> Store suggestions based on your budget</p>
+                    </div>
+
+                </div>
+                <div class="col s12 m12 l6">
+                    <h1 class="center-align">Featuring</h1>
+                    <div class="feature-list">
+                        <p class="flow-text"><i class="fa fa-money"></i> Simplify Commerce</p>
+                        <p class="flow-text"><i class="fa fa-map-o"></i> Places API</p>
+                        <img src="https://www.simplify.com/commerce/images/landing/logos/simplify-logo@2x.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="third" data-anchor = "contact">
+            <div class="about-text row center-align">
+                <h1>Contact</h1>
+            </div>
+            <!--begin form-->
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="Name" id="first_name" type="text" class="validate">
+                            <!--<label for="first_name">First Name</label>-->
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="message" class="materialize-textarea"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="about-text row center-align">
+                        <button class="btn-large waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!--end form-->
+            
+            
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage();
+
+            $(function() {
+                $('a[href*=#]:not([href=#])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
+            // $('.modal-trigger').leanModal();
+        });
+    </script>
+</body>
+
+</html>

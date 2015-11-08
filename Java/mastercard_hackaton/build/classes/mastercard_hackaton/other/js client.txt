@@ -1,0 +1,90 @@
+var connection;
+
+
+
+function connect() {
+    console.log("connection");
+    connection = new WebSocket("ws://10.200.213.144:80/");
+    // Log errors
+connection.onerror = function (error) {
+  console.log('WebSocket Error ');
+  console.log(error);
+
+};
+
+// Log messages from the server
+connection.onmessage = function (e) {
+  console.log('Server: ' + e.data); 
+  alert("Server said: " + e.data);
+};
+
+connection.onopen = function (e) {
+console.log("Connection open...");
+}
+
+connection.onclose = function (e) {
+console.log("Connection closed...");
+}
+}
+
+function sayHello() {
+    connection.send(document.getElementById("msg").value);
+}
+
+function close() {
+    console.log("Closing...");
+    connection.close();
+}
+
+--------------------------------------------
+
+public String reiceveMessage() throws IOException {
+    byte[] buf = readBytes(2);
+    System.out.println("Headers:");
+    convertAndPrint(buf);
+    int opcode = buf[0] & 0x0F;
+    if (opcode == 8) {
+        //Client want to close connection!
+        System.out.println("Client closed!");
+        socket.close();
+        System.exit(0);
+        return null;
+    } else {
+        final int payloadSize = getSizeOfPayload(buf[1]);
+        System.out.println("Payloadsize: " + payloadSize);
+        buf = readBytes(MASK_SIZE + payloadSize);
+        System.out.println("Payload:");
+        convertAndPrint(buf);
+        buf = unMask(Arrays.copyOfRange(buf, 0, 4), Arrays.copyOfRange(buf, 4, buf.length));
+        String message = new String(buf);
+        return message;
+    }
+    }
+	
+______________________________________________________
+
+function isRunning()  {
+        $address = 'darestium.dyndns-free.com';
+        $port = 4343;
+        $socket = socket_create(AF_INET, SOCK_STREAM, getprotobyname('tcp'));
+        $message = 'loolololol';
+
+        try {
+            socket_connect($socket, $address, $port);
+
+            $status = socket_sendto($socket, $message, strlen($message), MSG_EOF, $address, $port);
+
+            if ($status != false)  {
+                return true;
+            }
+
+            return false;
+        } catch (Exception $e)  {
+            return false;
+        }
+    }
+--------------------------------------
+
+or die("Could not create socket\n");
+$result = socket_bind($socket, $host, $port) or die("Could not bind to socket\n");
+$result = socket_listen($socket, SOMAXCONN) or die("Could not set up socket listener\n")

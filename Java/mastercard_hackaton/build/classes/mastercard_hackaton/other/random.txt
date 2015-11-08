@@ -1,0 +1,8 @@
+ArrayList<Location> locs = getLocations("11235","5811");
+        
+        for (int i = 0; i < locs.size() - 1; i++) {
+            System.out.println("#" + i + ": "
+            + locs.get(i).name + "," + locs.get(i).address
+            + locs.get(i).city + "," + locs.get(i).state
+            + "," + locs.get(i).phone);
+        }
