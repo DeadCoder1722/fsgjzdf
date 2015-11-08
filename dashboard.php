@@ -251,7 +251,7 @@ $budget_stuff= mysqli_fetch_assoc($budget_stuff_array);
                       <p>Website: {{ Website }}</p>
                     </div>
                     <div class="card-action">
-                      <a href="#" onclick = "confirmPrice('{{Price}}','<?php echo sprintf("%0.2f", floatval($budget_stuff["Food"] / 42.0)) ?>')">Order Here</a>
+                      <a href="#" onclick = "confirmPrice('{{Price}}','<?php echo sprintf("%0.2f", floatval($budget_stuff["Food"] / 42.0)) ?>', '{{ Website }}')">Order Here</a>
                      
                     </div>
                   </div>

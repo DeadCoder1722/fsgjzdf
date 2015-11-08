@@ -1,134 +1,227 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Budget Pig</title>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
 
-        <script type="text/javascript" src="https://www.simplify.com/commerce/v1/simplify.js"></script>
- 
-    </head>
-    
-    <body>
-        <ul class="collection with-header">
-        <li class="collection-header"><h4>Citi Cafeteria Menu</h4></li>
-        <li class="collection-item"><div>Very Berry Coconut Pancakes - $8.95<button data-target="modal2" class="btn modal-trigger menu" style="float: right";>Order</button></div></li>
-        <li class="collection-item"><div>Chicken Salad Snack - $9.95<button data-target="modal2" class="btn modal-trigger menu" style="float: right";>Order</button></div></li>
-        <li class="collection-item"><div>Turkey Paleo Cheeseburger - $10.95<button data-target="Order2" class="btn Order-trigger menu" style="float: right";>Order</button></div></li>
-        <li class="collection-item"><div>Egg Salad Snack - $8.95<button data-target="modal2" class="btn modal-trigger menu" style="float: right";>Order</button></div></li>
-        <li class="collection-item"><div>Bacon Chicken Waldorf - $9.95<button data-target="modal2" class="btn modal-trigger menu" style="float: right";>Order</button></div></li>
-        <li class="collection-item"><div>Cuban Roast Pork - $10.95<button data-target="modal2" class="btn modal-trigger menu" style="float: right";>Order</button></div></li>
-        <li class="collection-item"><div>Turkey Chili with Slaw - $10.95<button data-target="modal2" class="btn modal-trigger menu" style="float: right";>Order</button></div></li>
-        <li class="collection-item"><div>Wild Salmon Cakes - $10.95<button data-target="modal2" class="btn modal-trigger menu" style="float: right";>Order</button></div></li>
-        <li class="collection-item"><div>Chicken Fried Rice Cauliflower - $10.95<button data-target="modal2" class="btn modal-trigger menu" style="float: right";>Order</button></div></li>
-        
-        
-      </ul>
-      
+<head>
+    <title>Budget Pig</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
 
-  <!-- Modal Structure -->
-  <div id="modal2" class="modal">
-    <div class="modal-content">
-      <h4>Pay with your Credit Card</h4>
-      <form id="simplify-payment-form" action="" method="POST">
-    <div>
-        <label>Credit Card Number: </label>
-        <input id="cc-number" type="text" maxlength="20" autocomplete="off" value="" autofocus />
+    <script type="text/javascript" src="https://www.simplify.com/commerce/v1/simplify.js"></script>
+
+</head>
+
+<body>
+    <ul class="collection with-header">
+        <li class="collection-header">
+            <h4>Citi Cafeteria Menu</h4></li>
+        <li class="collection-item">
+            <div>Very Berry Coconut Pancakes - $8.95
+                <button data-target="modal2" class="btn modal-trigger menu" style="float: right" ;>Order</button>
+            </div>
+        </li>
+        <li class="collection-item">
+            <div>Chicken Salad Snack - $9.95
+                <button data-target="modal2" class="btn modal-trigger menu" style="float: right" ;>Order</button>
+            </div>
+        </li>
+        <li class="collection-item">
+            <div>Turkey Paleo Cheeseburger - $10.95
+                <button data-target="Order2" class="btn Order-trigger menu" style="float: right" ;>Order</button>
+            </div>
+        </li>
+        <li class="collection-item">
+            <div>Egg Salad Snack - $8.95
+                <button data-target="modal2" class="btn modal-trigger menu" style="float: right" ;>Order</button>
+            </div>
+        </li>
+        <li class="collection-item">
+            <div>Bacon Chicken Waldorf - $9.95
+                <button data-target="modal2" class="btn modal-trigger menu" style="float: right" ;>Order</button>
+            </div>
+        </li>
+        <li class="collection-item">
+            <div>Cuban Roast Pork - $10.95
+                <button data-target="modal2" class="btn modal-trigger menu" style="float: right" ;>Order</button>
+            </div>
+        </li>
+        <li class="collection-item">
+            <div>Turkey Chili with Slaw - $10.95
+                <button data-target="modal2" class="btn modal-trigger menu" style="float: right" ;>Order</button>
+            </div>
+        </li>
+        <li class="collection-item">
+            <div>Wild Salmon Cakes - $10.95
+                <button data-target="modal2" class="btn modal-trigger menu" style="float: right" ;>Order</button>
+            </div>
+        </li>
+        <li class="collection-item">
+            <div>Chicken Fried Rice Cauliflower - $10.95
+                <button data-target="modal2" class="btn modal-trigger menu" style="float: right" ;>Order</button>
+            </div>
+        </li>
+
+
+    </ul>
+
+
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h4>Pay with your Credit Card</h4>
+            <!--<form id="simplify-payment-form" action="" method="POST">
+                <div>
+                    <label>Credit Card Number: </label>
+                    <input id="cc-number" type="text" maxlength="20" autocomplete="off" value="" autofocus />
+                </div>
+                <div>
+                    <label>CVC: </label>
+                    <input id="cc-cvc" type="text" maxlength="4" autocomplete="off" value="" />
+                </div>
+                <div class="input-field col s12">
+                   
+                    <select id="cc-exp-month">
+                        <option value="01">Jan</option>
+                        <option value="02">Feb</option>
+                        <option value="03">Mar</option>
+                        <option value="04">Apr</option>
+                        <option value="05">May</option>
+                        <option value="06">Jun</option>
+                        <option value="07">Jul</option>
+                        <option value="08">Aug</option>
+                        <option value="09">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
+                    </select>
+                     <label>Expiry Date: </label>
+                    <select id="cc-exp-year">
+                        <option value="13">2013</option>
+                        <option value="14">2014</option>
+                        <option value="15">2015</option>
+                        <option value="16">2016</option>
+                        <option value="17">2017</option>
+                        <option value="18">2018</option>
+                        <option value="19">2019</option>
+                        <option value="20">2020</option>
+                        <option value="21">2021</option>
+                        <option value="22">2022</option>
+                    </select>
+                </div>
+                <button id="process-payment-btn" type="submit">Process Payment</button>
+            </form>-->
+            <div class='card-wrapper'></div>
+            <form>
+                <div class="row">
+                    <input type="text" name="number">
+                    <label for="number">Number</label>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        <input type="text" name="first-name" />
+                        <label for="first-name">First Name</label>
+                    </div>
+                    <div class="col s12 m12 l6">
+                        <input type="text" name="last-name" />
+                        <label for="last-name">Last Name</label>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        <input type="text" name="expiry" />
+                        <label for="expiry">Expiry</label>
+                    </div>
+
+                    <div class="col s12 m12 l6">
+                        <input type="text" name="cvc" />
+                        <label for="cvc">CVC:</label>
+                    </div>
+
+                </div>
+
+                <br>
+                <br>
+                <button id="process-payment-btn" class = "waves-effect waves-light btn center-align" type="submit">Process Payment</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+        </div>
     </div>
-    <div>
-        <label>CVC: </label>
-        <input id="cc-cvc" type="text" maxlength="4" autocomplete="off" value=""/>
-    </div>
-    <div>
-        <label>Expiry Date: </label>
-        <select id="cc-exp-month">
-            <option value="01">Jan</option>
-            <option value="02">Feb</option>
-            <option value="03">Mar</option>
-            <option value="04">Apr</option>
-            <option value="05">May</option>
-            <option value="06">Jun</option>
-            <option value="07">Jul</option>
-            <option value="08">Aug</option>
-            <option value="09">Sep</option>
-            <option value="10">Oct</option>
-            <option value="11">Nov</option>
-            <option value="12">Dec</option>
-        </select>
-        <select id="cc-exp-year">
-            <option value="13">2013</option>
-            <option value="14">2014</option>
-            <option value="15">2015</option>
-            <option value="16">2016</option>
-            <option value="17">2017</option>
-            <option value="18">2018</option>
-            <option value="19">2019</option>
-            <option value="20">2020</option>
-            <option value="21">2021</option>
-            <option value="22">2022</option>
-        </select>
-    </div>
-    <button id="process-payment-btn" type="submit">Process Payment</button>
-</form>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Pay</a>
-    </div>
-  </div>
-  
-<script type="text/javascript" src="https://www.simplify.com/commerce/v1/simplify.js"></script>
-<script type="text/javascript">
-    function simplifyResponseHandler(data) {
-        var $paymentForm = $("#simplify-payment-form");
-        // Remove all previous errors
-        $(".error").remove();
-        // Check for errors
-        if (data.error) {
-            // Show any validation errors
-            if (data.error.code == "validation") {
-                var fieldErrors = data.error.fieldErrors,
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/card/1.1.0/js/card.min.js"></script>
+    <script type="text/javascript" src="https://www.simplify.com/commerce/v1/simplify.js"></script>
+
+    <script type="text/javascript">
+        function simplifyResponseHandler(data) {
+            var $paymentForm = $("#simplify-payment-form");
+            // Remove all previous errors
+            $(".error").remove();
+            // Check for errors
+            if (data.error) {
+                // Show any validation errors
+                if (data.error.code == "validation") {
+                    var fieldErrors = data.error.fieldErrors,
                         fieldErrorsLength = fieldErrors.length,
                         errorList = "";
-                for (var i = 0; i < fieldErrorsLength; i++) {
-                    errorList += "<div class='error'>Field: '" + fieldErrors[i].field +
+                    for (var i = 0; i < fieldErrorsLength; i++) {
+                        errorList += "<div class='error'>Field: '" + fieldErrors[i].field +
                             "' is invalid - " + fieldErrors[i].message + "</div>";
+                    }
+                    // Display the errors
+                    $paymentForm.after(errorList);
                 }
-                // Display the errors
-                $paymentForm.after(errorList);
+                // Re-enable the submit button
+                $("#process-payment-btn").removeAttr("disabled");
             }
-            // Re-enable the submit button
-            $("#process-payment-btn").removeAttr("disabled");
-        } else {
-            // The token contains id, last4, and card type
-            var token = data["id"];
-            // Insert the token into the form so it gets submitted to the server
-            $paymentForm.append("<input type='hidden' name='simplifyToken' value='" + token + "' />");
-            // Submit the form to the server
-            $paymentForm.get(0).submit();
+            else {
+                // The token contains id, last4, and card type
+                var token = data["id"];
+                // Insert the token into the form so it gets submitted to the server
+                $paymentForm.append("<input type='hidden' name='simplifyToken' value='" + token + "' />");
+                // Submit the form to the server
+                $paymentForm.get(0).submit();
+            }
         }
-    }
-    $(document).ready(function() {
-         $('.modal-trigger').leanModal();
-         
-        $("#simplify-payment-form").on("submit", function() {
-            // Disable the submit button
-            $("#process-payment-btn").attr("disabled", "disabled");
-            // Generate a card token & handle the response
-            SimplifyCommerce.generateToken({
-                key: "YOUR_PUBLIC_KEY",
-                card: {
-                    number: $("#cc-number").val(),
-                    cvc: $("#cc-cvc").val(),
-                    expMonth: $("#cc-exp-month").val(),
-                    expYear: $("#cc-exp-year").val()
-                }
-            }, simplifyResponseHandler);
-            // Prevent the form from submitting
-            return false;
+        $(document).ready(function() {
+            $('.modal-trigger').leanModal();
+
+            $("#simplify-payment-form").on("submit", function() {
+                // Disable the submit button
+                $("#process-payment-btn").attr("disabled", "disabled");
+                // Generate a card token & handle the response
+                SimplifyCommerce.generateToken({
+                    key: "sbpb_MDQwZTI2MTUtYmQwYi00YzAyLWFkMjAtMzNkZDgyZDk1ZTFk",
+                    card: {
+                        number: $("#cc-number").val(),
+                        cvc: $("#cc-cvc").val(),
+                        expMonth: $("#cc-exp-month").val(),
+                        expYear: $("#cc-exp-year").val()
+                    }
+                }, simplifyResponseHandler);
+                // Prevent the form from submitting
+                return false;
+            });
+            $('form').card({
+                // a selector or DOM element for the container
+                // where you want the card to appear
+                container: '.card-wrapper', // *required*
+
+                // all of the other options from above
+            });
         });
-    });
-</script>
-    </body>
+    </script>
+    <script>
+        var card = new Card({
+            form: 'form',
+            container: '.card-wrapper',
+
+            formSelectors: {
+                nameInput: 'input[name="first-name"], input[name="last-name"]'
+            }
+        });
+    </script>
+</body>
+
 </html>

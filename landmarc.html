@@ -30,7 +30,7 @@
   <div id="modal2" class="modal">
     <div class="modal-content">
       <h4>Pay with your Credit Card</h4>
-      <form id="simplify-payment-form" action="" method="POST">
+     <!-- <form id="simplify-payment-form" action="" method="POST">
     <div>
         <label>Credit Card Number: </label>
         <input id="cc-number" type="text" maxlength="20" autocomplete="off" value="" autofocus />
@@ -69,7 +69,41 @@
         </select>
     </div>
     <button id="process-payment-btn" type="submit">Process Payment</button>
-</form>
+</form>-->
+ <div class='card-wrapper'></div>
+            <form>
+                <div class="row">
+                    <input type="text" name="number">
+                    <label for="number">Number</label>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        <input type="text" name="first-name" />
+                        <label for="first-name">First Name</label>
+                    </div>
+                    <div class="col s12 m12 l6">
+                        <input type="text" name="last-name" />
+                        <label for="last-name">Last Name</label>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        <input type="text" name="expiry" />
+                        <label for="expiry">Expiry</label>
+                    </div>
+
+                    <div class="col s12 m12 l6">
+                        <input type="text" name="cvc" />
+                        <label for="cvc">CVC:</label>
+                    </div>
+
+                </div>
+
+                <br>
+                <br>
+                <button id="process-payment-btn" class = "waves-effect waves-light btn center-align" type="submit">Process Payment</button>
+            </form>
     </div>
     <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Pay</a>
@@ -129,5 +163,16 @@
         });
     });
 </script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/card/1.1.0/js/card.min.js"></script>
+  <script>
+        var card = new Card({
+            form: 'form',
+            container: '.card-wrapper',
+
+            formSelectors: {
+                nameInput: 'input[name="first-name"], input[name="last-name"]'
+            }
+        });
+    </script>
     </body>
 </html>

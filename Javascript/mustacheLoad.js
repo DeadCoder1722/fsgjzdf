@@ -83,7 +83,7 @@ function loadUser() {
          "State": "NY",
          "ZIP": "10013",
          "Phone": "(212) 608-6156",
-         "Website": "www.ThisIsAWebsite.com",
+         "Website": "https://mastersofcode-lejamby.c9users.io/citiCafeteria.html",
          "Price": "30"
       },
       {
@@ -133,7 +133,7 @@ function loadUser() {
          "State": "NY",
          "ZIP": "10013",
          "Phone": "6466880058",
-         "Website": "www.ThisIsAWebsite.com",
+         "Website": "https://mastersofcode-lejamby.c9users.io/landmarc.html",
          "Price": "6"
       },
       {
@@ -201,13 +201,34 @@ function loadUser() {
   $('#cardz').html(rendered);
 }
 
-function confirmPrice(price,mealplan)
-{
- 
-  if(mealplan < price)
-  {
-    alert("Think about it?");
-    alert("Really");
-    confirm("Seriously, think about it");
-  }
+
+
+// $(document).ready(function(){
+  
+  function confirmPrice(price,mealplan,website){
+    // debugger;
+    if(parseInt(mealplan) < parseInt(price)){
+      alert("Think about it?");
+      alert("Really");
+      
+      confirmationText(website);
+
+    }
+    else{
+      
+      window.location.href = website;
+    }
+  };
+    
+  // });
+
+
+function confirmationText(website) {
+    var ask = window.confirm("Seriously, think about it");
+    if (ask) {
+        window.alert("Fine, you can buy it. We warned you");
+
+        document.location.href = website;
+
+    }
 }
